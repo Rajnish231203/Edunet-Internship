@@ -13,7 +13,7 @@ We collected hourly data for both energy demand and solar generation, cleaned it
 
 ⚙️ Key Tasks
 
-Data Gathering
+Data Gathering:
 
 Pulled hourly datasets from multiple sources.
 
@@ -21,7 +21,7 @@ Made sure timestamps and units (kWh) were consistent.
 
 Combined everything into a single dataset.
 
-Data Cleaning
+Data Cleaning:
 
 Dropped irrelevant columns like IDs and names.
 
@@ -52,7 +52,7 @@ The idea was to see how well we could capture patterns in both datasets using tr
 
 ⚙️ Tasks
 
-Feature Engineering
+Feature Engineering:
 
 Extracted temporal features: hour, month, dayofyear, season, timeofday.
 
@@ -62,13 +62,13 @@ Added rolling statistics (mean and standard deviation over past day).
 
 For demand, we also included Temperature, Humidity, and is_weekend, which seemed important.
 
-Model Training
+Model Training:
 
 Trained Random Forest and XGBoost models for both solar generation and demand.
 
 Tuned parameters like tree depth, number of estimators, and learning rate for better performance.
 
-Model Evaluation
+Model Evaluation:
 
 Model	MAE	RMSE	R²
 Solar Generation	93.04	149.03	0.805
@@ -80,7 +80,7 @@ Solar forecasting did a good job overall but still shows natural variability —
 
 Demand forecasting was almost perfect — daily usage patterns are very predictable.
 
-Visualization
+Visualization:
 
 Plotted feature importance to see which factors mattered most.
 

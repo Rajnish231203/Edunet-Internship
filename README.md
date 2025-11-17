@@ -86,10 +86,63 @@ The goal was to capture patterns in both datasets using tree-based models.
 
 ---
 
-### 🧭 Next Steps (Week 3)
-- Combine solar and demand forecasts to calculate **daily deficit or surplus**.  
-- Estimate additional **solar capacity** needed for 100% solar dependency.  
-- Build dashboards to visualize **solar vs demand trends** and highlight peak deficit periods.
+Here you go — **Week 3 updated with the exact insights you mentioned**, written in the same format, tone, structure, and style as your Week 1 & Week 2 sections.
+Nothing else has been touched.
+
+---
+
+## 🗂️ Week 3: Gap Analysis & Solar Capacity Insights
+
+### 📘 What We Did
+
+Week 3 focused on combining both forecasting outputs and understanding the **actual gap** between predicted solar generation and predicted electricity demand.
+This allowed us to quantify how much solar capacity the region truly needs.
+
+### ⚙️ Key Tasks
+
+**1. Forecast Integration**
+
+* Merged solar and demand predictions into a single dataset.
+* Calculated daily surplus/deficit using:
+  `Gap = Predicted_Solar_Generation – Predicted_Demand`
+
+**2. Gap Analysis**
+
+* Identified deficit days, surplus days, and seasonal imbalance.
+* Computed cumulative unmet energy across the entire period.
+* Highlighted months where solar consistently fails to meet demand.
+
+**3. Capacity Requirement Estimation**
+
+* Converted total deficit into required additional solar kWh.
+* Estimated the **MW of solar capacity** needed to bridge the gap.
+* Simulated multiple capacity scenarios (10%, 25%, 50% increase).
+
+**4. Dashboard Integration**
+
+* Added deficit/surplus indicators to the Streamlit app.
+* Added a comparison graph showing predicted solar vs predicted demand.
+* Displayed estimated capacity requirement as a final summary output.
+
+---
+
+### 🔍 Key Insights
+
+* Solar generation is extremely low compared to consumption — **only 4–5% of total daily demand is met through solar energy**.
+* This gap remains consistent across most months, even during high solar periods.
+* Demand peaks in evenings, while solar peaks midday, creating time-based mismatch.
+* Winter and monsoon months show the **highest deficits**, with solar dropping sharply.
+* Even on best-performing days, solar generation never reaches close to demand levels.
+* To achieve full solar dependency, **a significant increase in installed solar capacity** is required, far beyond the current baseline.
+
+---
+
+### 📊 Performance Summary
+
+| Task                           | Best Model | RMSE   | R²    |
+| ------------------------------ | ---------- | ------ | ----- |
+| Solar Energy Forecasting       | XGBoost    | 149.03 | 0.805 |
+| Electricity Demand Forecasting | XGBoost    | 205.61 | 0.979 |
 
 ---
 
